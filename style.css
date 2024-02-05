@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Big Shoulders Text', sans-serif !important;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(imagens/Backgound\ base.png);
+
+    background-position: center;
+    background-size: cover;
+
+    background-repeat: repeat;
+}
+
+.container>img {
+    height: auto;
+    max-width: 300px;
+
+    border-radius: 100%;
+
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 2vw;
+    border: 3px #FFFFFF solid;
+
+    animation-duration: 1s;
+    animation-name: log;
+}
+
+.container>h1:first-of-type {
+    color: #FFFFFF;
+    font-size: 2em;
+    text-align: end;
+    margin: auto 20px;
+}
+
+.container>h1:last-of-type {
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 2vw;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+
+    animation-duration: 2s;
+    animation-name: subir;
+}
+
+.links {
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    gap: 10px;
+    opacity: 0;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: subir;
+
+}
+
+.links a {
+    width: 100%;
+    padding: 5px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: rgba(0, 0, 88, 0.539);
+    border-radius: 100px;
+
+    border: #FFFFFF 3px solid;
+    text-decoration: none;
+}
+
+.links a img {
+    width: 30px;
+    background-color: #FFFFFF;
+    padding: 5px;
+    border-radius: 100px;
+}
+
+.links a h1 {
+    font-size: 1.5vw;
+    text-align: center;
+    margin: 0 auto;
+    color: #FFFFFF;
+}
+
+.texto {
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: calc(100% * 1.4);
+
+    position: absolute;
+    bottom: 2vw;
+    opacity: 0;
+
+
+
+    animation-name: subir1;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+
+    /*
+*/
+
+}
+
+
+
+
+/*
+.texto h2{
+  
+    transition: 2s;
+
+    animation: subir1 15s;
+    animation-delay: 3s;
+
+}  
+ */
+
+.texto {
+    transition: 3s;
+}
+
+
+
+.texto p {
+    max-width: 50%;
+    margin: 1vw auto;
+    transition: 2s;
+
+}
+
+@media (max-width:1024px) {
+    .container>h1:first-of-type {
+        font-size: 1.5rem;
+    }
+
+    .container>img {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .container>h1:last-of-type {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .container a>h1 {
+        font-size: 1.5rem;
+    }
+
+
+    .texto {
+        font-size: calc(100% - 20%);
+    }
+
+    .texto p {
+        max-width: 90%;
+    }
+}
+
+
+
+@keyframes log {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes subir {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes subir1 {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 100%;
+    }
+
+    90% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
